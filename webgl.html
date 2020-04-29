@@ -1,0 +1,229 @@
+<html>
+  <head></head>
+  <body>
+    <div
+      style="
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+      "
+    >
+      <div
+        id="animation_type"
+        style="
+          float: left;
+          position: relative;
+          width: 225px;
+          padding: 15px 8px;
+          background-color: white;
+          color: #333333;
+          font-weight: bold;
+          font-size: 16px;
+          cursor: pointer;
+          border-right: 1px solid lightgrey;
+        "
+      >
+        Explore Product Animations
+        <span
+          style="
+            transform: rotate(180deg);
+            position: absolute;
+            content: '';
+            right: 10;
+            top: 15;
+            width: 0;
+            height: 0;
+            border: 4px solid transparent;
+            border-color: black transparent transparent transparent;
+          "
+        >
+        </span>
+        <span
+          style="
+            position: absolute;
+            content: '';
+            right: 10;
+            top: 25;
+            width: 0;
+            height: 0;
+            border: 4px solid transparent;
+            border-color: black transparent transparent transparent;
+          "
+        >
+        </span>
+      </div>
+      <div>
+        <div
+          id="auto_rotate"
+          onmousedown="this.style.background='#333333';this.style.color='white'"
+          onmouseup="this.style.background='white';this.style.color='black'"
+          style="
+            float: right;
+            position: relative;
+            padding: 15px 8px;
+            background-color: white;
+            color: #333333;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+          "
+        >
+          Auto Rotate
+        </div>
+        <div
+          id="show_pins"
+          onmousedown="this.style.background='#333333';this.style.color='white'"
+          onmouseup="this.style.background='white';this.style.color='black'"
+          style="
+            float: right;
+            position: relative;
+            padding: 15px 8px;
+            background-color: white;
+            color: #333333;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            border-right: 1px solid lightgrey;
+          "
+        >
+          Show Pins
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="myModal"
+      class="modal"
+      style="
+        display: block;
+        position: fixed;
+        width: 50%;
+        bottom: 20px;
+        border-top: 4px solid lightgreen;
+        left: 20%;
+        background-color: lightgoldenrodyellow;
+        margin: 0 auto;
+        padding: 8px 25px;
+      "
+    >
+      <div
+        class="modal-content"
+        style="text-align: center; word-wrap: break-word;"
+      >
+        <p id="text"></p>
+        <button
+          class="close"
+          style="
+            width: 20px;
+            height: 20px;
+            color: #aaaaaa;
+            float: right;
+            font-weight: lighter;
+            font-size: 16px;
+            border: none;
+            border-radius: 50%;
+            background-color: lightgreen;
+            color: white;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            margin: 10px;
+          "
+        >
+          x
+        </button>
+      </div>
+    </div>
+    <div
+      id="animation_types_box"
+      style="
+        position: absolute;
+        top: 55;
+        left: 8;
+        background-color: #333333;
+        color: white;
+        font-weight: bold;
+        min-width: 242px;
+        max-height: 400px;
+        overflow: auto;
+      "
+    >
+      <div
+        id="front_view"
+        onmousedown="this.style.background = 'black'"
+        onmouseup="this.style.background = '#333333'"
+        style="
+          padding: 12px 8px;
+          border-bottom: 0.3px solid lightgrey;
+          cursor: pointer;
+        "
+      >
+        Show Front View
+      </div>
+
+      <div
+        id="rear_view"
+        onmousedown="this.style.background = 'black'"
+        onmouseup="this.style.background = '#333333'"
+        style="
+          padding: 12px 8px;
+          border-bottom: 0.3px solid lightgrey;
+          cursor: pointer;
+        "
+      >
+        Show Rear View
+      </div>
+
+      <div
+        id="default"
+        onmousedown="this.style.background = 'black'"
+        onmouseup="this.style.background = '#333333'"
+        style="
+          padding: 12px 8px;
+          border-bottom: 0.3px solid lightgrey;
+          cursor: pointer;
+        "
+      >
+        Animate Front Cover
+      </div>
+
+      <div
+        id="animation1"
+        onmousedown="this.style.background = 'black'"
+        onmouseup="this.style.background = '#333333'"
+        style="
+          padding: 12px 8px;
+          border-bottom: 0.3px solid lightgrey;
+          cursor: pointer;
+        "
+      >
+        Animate Top Cover
+      </div>
+      <div
+        id="show_overview"
+        onmousedown="this.style.background = 'black'"
+        onmouseup="this.style.background = '#333333'"
+        style="
+          padding: 12px 8px;
+          border-bottom: 0.3px solid lightgrey;
+          cursor: pointer;
+        "
+      >
+        Show Overview
+      </div>
+      <div
+        id="show_features"
+        onmousedown="this.style.background = 'black'"
+        onmouseup="this.style.background = '#333333'"
+        style="
+          padding: 12px 8px;
+          border-bottom: 0.3px solid lightgrey;
+          cursor: pointer;
+        "
+      >
+        Show Features
+      </div>
+    </div>
+  </body>
+</html>
